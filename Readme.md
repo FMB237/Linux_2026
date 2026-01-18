@@ -61,7 +61,7 @@ to remove all of them used the command
 rmdir folder1 folder2 folder3 
 
 Folders can be create with hierachy using the / commands like 
-# mkdir 1/2/3 this will create a hierachy folders 
+# mkdir 1/2/3 -p this will create a hierachy folders 
 So this will create a principal folder 1 with folder 2 inside folder 1 and folder 3 inside folder 2 
 So want a hierachy folder creation.
 # NOW let install tree which will permit us to use the commands in a hierachy way 
@@ -78,3 +78,59 @@ e.g echo > echo.txt  which will also create a  file with name echo
 So a file with no name extension on linux will be used without any problem 
 We can also used the cat command to create a file
 # e.g cat >info.txt Hey Bro are okay 
+
+
+# Lesson 5 : Basic file operations
+
+Here we talk about operations like files copying mainly used on server by passing the through the terminal that is 
+moving files into our server from one directory to another.
+Let create a new file and copy it inside the 1/2 folder
+Now the Bruce.txt file is in the 2 Folder with the 3 folder
+# So to copy we used the command cp 
+# Like cp Bruce.txt 1/2
+Now we can used the tree the command to observe all the files into our project folder
+Now let copy all files using the star "*" into another directory
+# Exemple cp * hello 1/2/3
+Use to copy all the files with the name hello into folder3.
+
+Now let move on our files for moving files we used the command  mv 
+# Exemple mv hello.txt 1 
+This will move the hello.txt file into the directory named 1  and we can also used the mv to rename files 
+# Exemple mv echo echo.txt
+
+The rm command is used to delete file 
+# Exemple rm hello.txt
+to remove a folder used the command rmdir 
+To remove  a folder with file inside that is forcing delect mainly we used the command 
+# Exemple rm M* -r 
+I use it to delect me Miguel Folder
+
+# Finally  Never use the command rm -rf/
+And all file delected from the console do not goes to the trash can.
+
+
+# Lesson 6 :Viewing Files
+For this lesson i added a file that is a small from the course name like Romeo+and+Juliet+poem.txt
+The wget help us to download files directly using the terminal and a URL 
+# wget http://url_name
+Let learn how to view file small small on our terminal 
+# more filename
+Using more -10 will output the file contain from the -10 line 
+and using more +150 will output the file contain from the 150 line 
+This option can be combien like using 
+# more +150 -25 filename
+We can even used more to search words inside our files
+more -s Dog filename
+Using the less command 
+It almost functions as the more command
+# Using  the less command for search we use the folloing procedure
+# less -p "Word" filename
+We can fine Romeo with 
+# less -p "Romeo" Romeo+and+Juliet+poem.txt
+
+
+We also have the head and tail commands used to view only last lines and first lines of our files
+
+# Exemple head filename
+tail  -1 packages.sh 
+head -3 package.sh
