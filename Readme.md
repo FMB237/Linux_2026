@@ -169,3 +169,44 @@ I Created file we name Bruce.txt with it backup .
 The backup will store files gradually 
 nano text editor also allows us to copy files within the terminal using the follwoing set of commands
 Need to improve my nano skills 
+
+
+# Lesson 10 : Folder Structure
+Now let learn how files are been stuture in the linux operating system
+In linux we have directories that can only be access by the root user (Super User)
+Into the bin directory we can find alot of scripts that are important for our system
+The boot directoty is a directoty that contains all the essential tools to premit the system to boot 
+Generally we can drive into almost all this directories like home directory which store all our files
+Lib Directory  which all the system libraries.
+The opt directory is used for additional files that means i can stores other file and system features
+The Proc contain files  and logs processes.
+The root is mainly for the root user 
+The tmp folder store temporal file so files in it are not save and lose when PC is been restarted.
+Usr directory stores users
+Crash directoty store crash and logs
+
+# Use the df command to show the file and df -h to show more informations like File weight
+and  also the df -hT / To show our disk space
+
+Now let chech the utility call du
+# du = Disk Usage
+du ~ .s
+# Using the command du ~ .s to show all files into your pc 
+We can also used the command du ~ .sh but with a big system this will almost take on all the resources.
+We can even exclude files we have to use or to read like excluding file types.
+
+# Now let move to tar files which is a way of compressing files like zip but bascially intergrated for linux
+Let create an archive of the Romeo.txt file 
+# tar -cf romeo.tar.gz Romeo+and+Juliet+poem.txt  
+to create a Tar archive of the Romeo+and+Juliet+poem.txt
+# Let now compress our tar file   with something like : tar -zcf romeo-zip.tar.gz Romeo+and+Juliet+poem.txt 
+We will observe that the file is now 3 times smaller than the original one .
+Let Create a backup_text folder an move our tar to it .
+We can also use the following set of commands to extrait files using the tar 
+# tar -xf filename to extract 
+We can also used zip  to work with archive 
+the systax is simple that 
+# zip filename and unzip filename
+
+
+# Lesson 11 : Find commands

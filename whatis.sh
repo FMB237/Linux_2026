@@ -14,9 +14,18 @@ whatis history
 whatis reset 
 whatis more 
 whatsis less
+whatis vim
 whatis vi
+whatis nano
+whatis df
 
  #Let view all the file that are in our downlpad directory.
 
  ls ~/Downloads 
  ls ~/Documents -a
+
+ df 
+ df -h 
+ df -hT
+ df -hT /
+ 

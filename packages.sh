@@ -13,3 +13,6 @@ sudo apt install vim nano
 
 #Let also install vim-runtime
 sudo apt install vim-runtime -y 
+
+#Let add zip 
+sudo apt install zip 
