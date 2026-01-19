@@ -134,3 +134,21 @@ We also have the head and tail commands used to view only last lines and first l
 # Exemple head filename
 tail  -1 packages.sh 
 head -3 package.sh
+
+# Lesson 7: let drive into linux text editors
+On like default windows simple text editor linux also have it default text editor which is genrally already install in 
+# What is Vim
+But personal i prefer nano and i more fast with nano which is another linux test editor
+to exit vim with use the command :q while to exit vim with used the command :wq
+Note : Vim has almost replace Vim on all modern linux distros due to it simplecity.
+
+# Vim has many modes
+1. Command Mode
+2. Normal mode 
+3. Insert mode
+we switch between this modes using the escape key on our keyboard
+Generally we exit file by making changes on them on vim using the command :wq but if we do not have to save any change we will used the command  :q!
+When the ! means not 
+In Vim we can also move on cursor on vim using so short cut commands
+
+On like almost all text editors vim supports search which can be done using the "/ key"

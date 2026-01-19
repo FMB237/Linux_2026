@@ -13,6 +13,8 @@ whatis whoami
 whatis history
 whatis reset 
 whatis more 
+whatsis less
+whatis vi
 
  #Let view all the file that are in our downlpad directory.
 
