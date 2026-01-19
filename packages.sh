@@ -10,3 +10,6 @@ sudo apt install tree wget curl
 
 echo "Installing Tree Editors for terminals"
 sudo apt install vim nano 
+
+#Let also install vim-runtime
+sudo apt install vim-runtime -y 

@@ -151,4 +151,21 @@ Generally we exit file by making changes on them on vim using the command :wq bu
 When the ! means not 
 In Vim we can also move on cursor on vim using so short cut commands
 
-On like almost all text editors vim supports search which can be done using the "/ key"
+On like almost all text editors vim supports search which can be done using the "/ key" type the word search and used  the key 'n' from our keyboard to continue the search inside the file
+We can add some git functions to Vim and customise it to me a full IDE but that mainly for old schools guys.
+
+# Lesson 8 : Vimtutor 
+type vimtutor after installing vim-runtime and we will get a small tuto that will permit to learn how to use vim 
+Go through the documententation and Upgrade your vim skills
+
+# Lesson 9 : nano text editor
+to launch nano type the followingn nano filename 
+Example nano Bruce.txt
+To save in nano we used "CRTL + S" and to Write over you used the key "CRTL + O" to exit editor we used the keys "CRTL +X"
+
+With nano we can Create a Backup file of our create file using the command 
+# nano -B or nano filename -B
+I Created file we name Bruce.txt with it backup .
+The backup will store files gradually 
+nano text editor also allows us to copy files within the terminal using the follwoing set of commands
+Need to improve my nano skills 
