@@ -13,11 +13,13 @@ whatis whoami
 whatis history
 whatis reset 
 whatis more 
-whatsis less
+whatis less
 whatis vim
 whatis vi
 whatis nano
 whatis df
+whatis du 
+whatis whoami
 
  #Let view all the file that are in our downlpad directory.
 
@@ -28,4 +30,4 @@ whatis df
  df -h 
  df -hT
  df -hT /
- 
+

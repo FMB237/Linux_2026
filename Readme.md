@@ -210,3 +210,23 @@ the systax is simple that
 
 
 # Lesson 11 : Find commands
+Generally on linux the first command we used to find a file using the termainal is the find command
+# find filename or find filenane* 
+Always specified the extension of the file we wanna find.
+# exemple find * .txt
+We can find the exact size of a file to search 
+# example find -size +10k or find -size 100k or find -size 10M
+
+# Lesson 12 : Getting user info 
+Let help how to get user informations in linux
+First command to used is the whoami command to ask to the system which user you are actually 
+We also have the command groups to show the groups  user information and id
+# So we have whoami id groups
+We can switch from up user to another using the su 'Username' command
+Using sudo su to swicth to superuser In root mode we can clearly seen that we have the user in ending with  '#' while simple users have only a $ symbol
+
+# Sudo su to switch to root mode
+Now let checkout the current infos about the current user
+Hey we talk about UID and GID
+UID: user identification
+GID : group Identification
