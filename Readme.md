@@ -261,3 +261,13 @@ In linux we have mainly many types of users
 2. The normal user 
 3. The clients
 4. The daemon users (Only for running severes like ssh user the id is from 1 to 4096)
+ 
+# Lesson 14 : Change Users
+# To check up user change we can use the command usermod
+ Use the Usermod  change our user properties so we can used this commands to block a user and modified the user accounts
+ # sudo usermod -L username 
+ And this does not tells the user he or she is block
+ to unblock our user we used the command 
+ # sudo usermod -U username
+ How let change the user home directory  using the command
+ sudo usermod -d /home/newusername
