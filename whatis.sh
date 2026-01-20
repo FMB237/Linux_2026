@@ -20,6 +20,8 @@ whatis nano
 whatis df
 whatis du 
 whatis whoami
+whatis useradd
+whatis usermod
 
  #Let view all the file that are in our downlpad directory.
 
