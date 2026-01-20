@@ -221,7 +221,7 @@ We can find the exact size of a file to search
 Let help how to get user informations in linux
 First command to used is the whoami command to ask to the system which user you are actually 
 We also have the command groups to show the groups  user information and id
-# So we have whoami id groups
+# So we have whoami, id, groups
 We can switch from up user to another using the su 'Username' command
 Using sudo su to swicth to superuser In root mode we can clearly seen that we have the user in ending with  '#' while simple users have only a $ symbol
 
@@ -230,3 +230,34 @@ Now let checkout the current infos about the current user
 Hey we talk about UID and GID
 UID: user identification
 GID : group Identification
+
+
+# Lesson 13 : User Creation
+In linux User creations is a very simple task and we have look the doc on it by using the command
+# useradd --help
+Note that the use of upper and lower case letters in linux are very important and respected 
+we can do the following from the doc
+-d, --home-dir HOME_DIR       home directory of the new account
+-G, --groups GROUPS           list of supplementary groups of the new account
+-s, --shell SHELL             login shell of the new account
+-u, --uid UID                 user ID of the new account
+-U, --user-group              create a group with the same name as the user
+
+# So let now create a newusers
+using the command 
+# sudo useradd name 
+e.g sudo useradd miguel -m 
+and also create a user that can access the shell
+sudo useradd Fouenang -m -d /home/FMB237 -s /bin/bash
+
+Beside the useradd we also have the adduser command
+# adduser Bruce123 
+Which is a more specific command which permit to provide more informations about the user we are creating on liunx
+# sudo adduser Bruce123
+With adduser we can more security.
+We can delect this users using the command deluser <username>
+In linux we have mainly many types of users 
+1. The Root mainly call the superUser
+2. The normal user 
+3. The clients
+4. The daemon users (Only for running severes like ssh user the id is from 1 to 4096)
