@@ -271,3 +271,27 @@ In linux we have mainly many types of users
  # sudo usermod -U username
  How let change the user home directory  using the command
  sudo usermod -d /home/newusername
+
+
+# Lesson 15 :  Root Privelges and User delections
+In linux can use the root privelges using the command sudo But only if the user is in the root group 
+We use the command whoami to know which user we are actually delecting with and alos the command 
+# groups <username> to know to which groups belongs our actual user
+Example using groups bruce we have the following output 
+bruce : bruce adm dialout cdrom sudo dip plugdev users kvm lpadmin sambashare ubridge libvirt wireshark docker
+Since bruce belongs to the sudo group,docker and other it have the privelge to access this groups functions.
+To add a user in another group we use the command 
+# sudo usermod -a G sudo "username"
+We can remove this root right from the user using the following set of commands
+# sudo deluser 'username' sudo 
+Note all the rules can be edited from the files in our system
+
+# Lesson 16 : Group Management
+To Create Groups in linux the made command we can use is the command groupadd 
+We can more information about that using the command groupadd --help
+Let just add a new group like let add remote workers
+# sudo groupadd remote_workers
+Then use the command tail /etc/group to view if the new group was created
+Now let add some users to our group 
+sudo usermod -aG remote_workers  "username"
+When we want to delect a group we simply use the groupdel command
