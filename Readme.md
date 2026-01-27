@@ -295,3 +295,37 @@ Then use the command tail /etc/group to view if the new group was created
 Now let add some users to our group 
 sudo usermod -aG remote_workers  "username"
 When we want to delect a group we simply use the groupdel command
+# sudo groupdel remote_workers
+Then use again the command tail /etc/group to see weather the added group was delected successfully .
+
+# Lesson 17 :Getting Start with chmod commands
+When we use the command ll will have some results that describe out files that is :  -rw-rw-r--  1
+To which owner is the file,to the groups the file belongs and a code for Reading writing and other functions
+r= Read Which give the ability to open a file
+w= Write allows us to edit a file or directory
+x= execute to run the file
+# To change all this setting we use the tools knows as chmod commands
+So chmod start for change mode
+Use the command chmod --help to document on the use of the chmod command
+Rememeber that to delect a folder we use the command rm  -r * 
+Now let create a new file  to work with. 
+
+ touch important_file -rw-rw-r-- This will the permissions of the file
+ Then let change some permission led to this file
+ # chmod o+w important_file.
+After this command the file will have the following permissions -rw-rw-rw-
+chmod go-rw 
+To set permission to read and write to all the users and groups in our file we used the command 
+# chmod a=rw *  or "filenanme"
+to change this permission can also use digit 
+# Lesson 18 : Changing File owners
+This is still done using the chown(Change Owner Command)
+The change owner is an admin(root) command so we always need to use it passing through the sudo command
+# E.g sudo chown -R $USER:$USER "filename" 
+This is mainly used to give privelge to a file by many other users.
+other exemple can be sudo chown "groupname":"groupname" file
+To change to which gropu belongs a particular file .
+we can document on the change owner command using the chown --help command 
+
+We can also change the group ownership using the command 
+# sudo chgrp "Newgroup" .
