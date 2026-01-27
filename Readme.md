@@ -329,3 +329,16 @@ we can document on the change owner command using the chown --help command
 
 We can also change the group ownership using the command 
 # sudo chgrp "Newgroup" .
+
+# Lesson 19 :Special bit default permission 
+Create 2 files to work with using the command 
+touch public_excution &&   touch private_excutions
+Which on we will configurate what mainly we need to the use of private and public mode files
+With the public file the access will be granted by any user and group while with private file the access will be selective with users and groups
+chmod u+x public_excution will make the public file  executable by any perso or group in our computer.
+other command is chmod u+s *
+
+Let talk about the sticky bit which prevent delection of some files to be delected 
+It is added using the command chmod t .
+Let talk about the unmask command 
+We can view it doc using the command umask 

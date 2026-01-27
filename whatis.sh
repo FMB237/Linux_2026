@@ -24,6 +24,8 @@ whatis useradd
 whatis usermod
 whatis userdel
 whatis groupadd
+whatis chmod
+whatis chown
 
  #Let view all the file that are in our downlpad directory.
 
