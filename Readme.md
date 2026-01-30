@@ -342,3 +342,26 @@ Let talk about the sticky bit which prevent delection of some files to be delect
 It is added using the command chmod t .
 Let talk about the unmask command 
 We can view it doc using the command umask 
+
+
+# Let Continue Leanring this course after a Break
+
+# Lesson 20 :Links and INodes
+let Use  the df -h command to check our disk space as seen the lesson up 
+ IN Linux the  used of the in commabd is mainly for many purpose and links seem to be a very imporant issue
+# To Create Links we used the ln command
+Let create a file name main_config using the command
+touch main_config.text
+So let create link file using the ln command
+# ln main_config.text link_config.next
+This will create a link_config file 
+Now let create a solve link  using the suffix "s" e.g
+# ln -s main_config.txt softlink_config.txt 
+If we look at the contain of all this files we gonna find the have the same contain.
+Let add some addition informations to our main_config.txt and observer the behaviour of all the other linked files
+We gonna observe that all the files have the same content but the original file is said to have the more weight than all the others aminly because of the multiple links to it .
+
+Note bro i always better for me to create a soft link and hard link in other to avoid breaks and lose of data
+If the original file is been delected then all of the links file will be delected 
+Then if working on a server we can used the history command to vue all the command we used to avoid long ajustement and repetitions.
+# Lesson 21 : Input && Output Stream

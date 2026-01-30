@@ -26,6 +26,7 @@ whatis userdel
 whatis groupadd
 whatis chmod
 whatis chown
+what is ln
 
  #Let view all the file that are in our downlpad directory.
 
