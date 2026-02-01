@@ -364,4 +364,22 @@ We gonna observe that all the files have the same content but the original file 
 Note bro i always better for me to create a soft link and hard link in other to avoid breaks and lose of data
 If the original file is been delected then all of the links file will be delected 
 Then if working on a server we can used the history command to vue all the command we used to avoid long ajustement and repetitions.
-# Lesson 21 : Input && Output Stream
+# Lesson 21 : Input && Output Stream 
+In linux the terminal is mainly defined and consider as the  input and output device
+Let talk about the cat command which permit to view the text inside a file it also fonctions as the more command
+# cat filename
+So with cat we can view the contain of multiple files at the same time using a single command
+# cat file1 file2 file3
+We can even send the output of our cat command into a single file 
+# cat file1 file2 file3 > file
+This will send the contain of all this files into a single file named file 4
+We can also used the cat command to create and write inside a file 
+
+# cat > filename 
+
+# If we want to applied modifications to this file we use the command cat  >> filename
+So that the previous contain of the file remains the same 
+# Let remember the file command 
+find * .txt  or find * .sh 
+Remember when using the history command we could ajust it like 
+# history 25 or history 20 to only view the  20 or 25 pass commands 

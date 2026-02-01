@@ -27,6 +27,7 @@ whatis groupadd
 whatis chmod
 whatis chown
 what is ln
+whatis cat
 
  #Let view all the file that are in our downlpad directory.
 
