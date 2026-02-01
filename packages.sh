@@ -16,3 +16,6 @@ sudo apt install vim-runtime -y
 
 #Let add zip 
 sudo apt install zip 
+
+#Let install package for pipeline management
+sudo apt install pandoc

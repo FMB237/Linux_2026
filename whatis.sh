@@ -28,6 +28,7 @@ whatis chmod
 whatis chown
 what is ln
 whatis cat
+whatis pandoc
 
  #Let view all the file that are in our downlpad directory.
 

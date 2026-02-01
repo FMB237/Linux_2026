@@ -380,6 +380,65 @@ We can also used the cat command to create and write inside a file
 # If we want to applied modifications to this file we use the command cat  >> filename
 So that the previous contain of the file remains the same 
 # Let remember the file command 
-find * .txt  or find * .sh 
+find  -name "*.txt"  or find -name "*.sh" 
 Remember when using the history command we could ajust it like 
-# history 25 or history 20 to only view the  20 or 25 pass commands 
+# history 25 or history 20 to only view the  20 or 25 pass commands we used
+
+# Lesson 22 :Pipeline
+ In other to start doing pipeline in Linux we gonna need to install a package now as pandoc
+ # So we gonna have an installation like sudo apt install pandoc
+ Pandoc is a utility program which have the capacity to convert files into differcent formats
+ Let also get familia with wc  
+ we can you the help for this command to view what is the main aim of this command and how it is been used.
+ # wc --help
+ So we used the  wc  filename 
+ So this command permit us to know the number of lines in a file, it size and number of bytes
+ # wc -l filename wc -c filename wc -w filename
+ 
+
+ To use the pipeline in linux we use a vertical slash which is sepearating our text
+ # Example cat   Romeo+and+Juliet+poem.txt | wc -l or wc -l  or wc -c Depending on what we what to display to our screen
+
+Let try to pipe the result of the ls command 
+# ls | wc -l or wc -w 
+Both will pipe the ls command for displaying either the numbers od lines or bytes of our files inside our folder
+Previously we saw the find command and how to use it but with can pipe it 
+# example find -name "*.txt" | head -5 
+To show all the txt 5 first text files in our folder 
+If we can use find that maans we can also used the tails command
+find -name "*.txt" | tail -5 
+
+Now we can sort our files using the pipeline
+find -name "*.txt" | head | sort 
+find -name "*.txt" | head | sort |uniq
+# find -name "*.txt" | head | sort |uniq | wc > line_text.txt
+SO we can deside to store the results inside a file 
+
+# Now let move on to the grep utility commands has as main aim to enable line search
+So  let consider we want to find a particular word inside a File like in our Romeo+and+Juliet.txt 
+We gonna used the grep and pass the word inside the pipeline
+
+cat  Romeo+and+Juliet+poem.txt | grep "Romeo" | wc -l this is an example
+The result will give us the numeber of  time Romeo  is been mention into our  text .
+If we used the grep command  only  the file will be displayed with the selected grep text highlighted
+cat  Romeo+and+Juliet+poem.txt | grep "Romeo" 
+cat  Romeo+and+Juliet+poem.txt | grep "Romeo"  -o  For only showing the highlight words.
+# This method is very useful for analyse logs in linux 
+In linux the logs files are in the following location
+ /var/log/syslog
+ So we can pas the reasons of precise and particular analyse
+
+cat /var/log/syslog | grep systemd 
+cat /var/log/syslog | grep  cron 
+cat /var/log/syslog | grep cron | grep root |
+cat /var/log/syslog | grep cron | grep root | wc -l 
+These are command pipelines
+# Now le t discuss about the used of the echo command 
+Let take the example of using the echo command which simplie display some text to our terminal then the used of the | will change everything
+echo "Hello Bro"
+echo "Hello Bro" && echo "It was the first of ferbuary 2026"
+
+echo "Hello Bro" || echo "It was the first of ferbuary 2026"
+This command will permit to execute the first command and check if is functional or correct then look after the second command
+So i proeced set by sets So if the is an error in the first command the second command will execute if not it will not execute.
+#  Example : head Romeo+and+Juliet+poem.txt || echo "Error Reading file"
