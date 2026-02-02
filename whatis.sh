@@ -29,7 +29,10 @@ whatis chown
 what is ln
 whatis cat
 whatis pandoc
-
+whatis wc
+whatis htop
+whatis ps
+whatis kill 
  #Let view all the file that are in our downlpad directory.
 
  ls ~/Downloads 

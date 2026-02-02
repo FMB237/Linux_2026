@@ -472,3 +472,28 @@ which htop we can even see the list of cpu cores at the top of our terminal
 Htop is more modern than the top tool and very used today in server
 Using the F1 to F10 keys can easily have functions step up on it which permit us to easily manage process on our terminal and it can customise 
 Htop has a beautiful interface as compare to the classic top with color which permit us to easily differciante processes .
+in htop we can deside which subprocess we want to terminate or kill form the bigger process like stoping subprocesses in firefox.
+htop support mouse usage vertical and hortizontal scrolling 
+When killing command we use always rely on the on the ps and kill command 
+ps will give us informations about a specific process So ps is more static way of looking at our processes
+The ps command can be used with the pipeline for accurate searchs and command precision.
+# we gonna use kill PID to kill and specific process
+
+let move on the pidof command 
+Use to find the process ID of a running program 
+since some programs generally runs with multiple processes like web browsers but we know that all the web pages inside a web browser are been consider as process of the general program which is the web browser itself.
+# let move to the systemctl command 
+the Systemctl has the roll to control the systemd system and service manager in our linux system 
+using a pipe and systemctk we can know the number of processes we are running on our machine 
+# example systemctl | wc -l 
+This will list all the processes running on our machine  we can do the same for the number of  bit and some other processes
+But we mostly used systemctl to manage particular serving like ssh or even database on our machine 
+using the status command
+
+# Example systemctl status ssh
+
+We can also used systemctl to enable, start on even stop a serice on our machine 
+# Example systemctl enable ssh,systemctl start ssh, systemctl stop ssh
+
+We can  associate this command withe used of the sudo command to manage our servrice from the root directly .
+We can also disable services using this process 
