@@ -19,3 +19,6 @@ sudo apt install zip
 
 #Let install package for pipeline management
 sudo apt install pandoc
+
+#Let install some task manager tools 
+sudo apt install htop && sudo apt install btop 

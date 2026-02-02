@@ -442,3 +442,33 @@ echo "Hello Bro" || echo "It was the first of ferbuary 2026"
 This command will permit to execute the first command and check if is functional or correct then look after the second command
 So i proeced set by sets So if the is an error in the first command the second command will execute if not it will not execute.
 #  Example : head Romeo+and+Juliet+poem.txt || echo "Error Reading file"
+
+
+# Lesson 23 : top utility (task manager) 
+In Linux the management of resource is an essential tools and important aspect as linux is mostly used in servers
+By default on our linux system we have the tool top which permit us to display our computer task manager and processes inside a terminal
+top permit us to have a global view of all what is happening on out system to now which process does what and how to consume RAM  on our design
+we also have some more advance tools like htop and btop for resource monitoring
+So this tools permit to monitor processses and to have fully control on our resources if a process becomes harmful we can easily identified it  stop or kills it
+# To launch all this we only need to enter top or htop or btop in our terminal depending on what we have installed
+Processes are identified using the PID = process identification number
+So we use the PID to stop on kill the process using it PID directly 
+In linux i want a virtual RAM memory knows as swap memory which is mainly used when the RAM is suspense with processes So the swap memory is used to do some small tasks so that the RAM can focus on more importanc tasks.
+# The Swap is a file written on the disk  so it uses the the disk the swap memory depends mainly on the RAM capacity and a machine have 
+ what is the swap memory and how much swap can a machine have according to it actual RAM  ?? So is swap base on RAM or on user disk ??
+ Personally i have 8gb RAM with 1tb HDD so i gonna increase me swap memory one day 
+ This session have permit me to even increase me swap memory from 2gb to 12gb for me Computer to be more balance 
+ And also using the top command and how to read processes on linux 
+ In linux the first command process to be launch is the systemd 
+ So i gonna try to display only the systemd process in mr terminal using the top command
+ Using htop and top we can filter and find  process running inside our terminal and study their behaviour can we simply 
+So by using the filter we can just kill the processes filter after on stop them 
+# we can use sudo kill PID
+Each user can only kills his own processes but that only applies to them and not to the root user which can kill any process when he wants.
+# So we can use sudo top or sudo htop and kill any process 
+
+# Lesson 24 :htop,ps,kill systemcli utilities
+which htop we can even see the list of cpu cores at the top of our terminal
+Htop is more modern than the top tool and very used today in server
+Using the F1 to F10 keys can easily have functions step up on it which permit us to easily manage process on our terminal and it can customise 
+Htop has a beautiful interface as compare to the classic top with color which permit us to easily differciante processes .
