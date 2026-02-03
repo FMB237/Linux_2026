@@ -33,6 +33,11 @@ whatis wc
 whatis htop
 whatis ps
 whatis kill 
+whatis pidof
+whatis systemctl
+whatis apt 
+whatis flatpak
+whatis mc
  #Let view all the file that are in our downlpad directory.
 
  ls ~/Downloads 

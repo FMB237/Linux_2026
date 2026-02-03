@@ -497,3 +497,41 @@ We can also used systemctl to enable, start on even stop a serice on our machine
 
 We can  associate this command withe used of the sudo command to manage our servrice from the root directly .
 We can also disable services using this process 
+# sudo systemctl disable ssh,cron,docker
+
+# Lesson 25 : apt/apt-gt utility
+ This section is mainly about software managenlent utilities in liun and how we handle packets in our whole system
+ In linux software are been refers and packages and this packages are been stored on cloud repositories
+ # So in linux when using the apt command we refers from talking a packet from the apt-repository
+ Note mainly systems like Debian and Ubuntu base Systems mainly relies on the huge APT repositoty and it large number of packages
+ The main propose of this repositoties is to unified software management and update so that any  user can easily used and access packages
+ So the command apt update  to renew package in our computer
+ we also have some other package system like Snap creted by Canonical which is today the default package management for Ubuntu 
+ So snap are been consider slox and bunky by the linux community 
+ For System base on Red-Enterprice -linux the main  package management is the rpm repository
+ Sudo the use the command dnf update && dnf upgrade
+
+ I can also have more package managements
+
+ But in linux use mostly user apt and Flatpak packages which are lighter and more compatible with our systems and machine.
+ On a linux machine we generally have software install form differcent package management.
+
+ # we can view all what the package manager can with comamand : apt ? or dnf ?
+ Note apt is mainly an adminstrative command  that is while we mostly used 
+ # sudo apt update && sudo apt upgrade 
+ So using our package manager we can install app using the apt install package_name
+ Remove using the apt remove package_name
+ We can also purge packages using the apt purge so that all the setting of our app should be our will be delected
+
+ # Lesson 26 :  dpkg utility
+ dpkg stands for debian packages and can manager other packages it mainly offers more flexibity to our systems 
+ # The dpkg is the package which permit us to install .deb files so it make our lifes easier on linux
+ Always call the command help like dpkg --help and view what it can do 
+# dpkg -l | wc -l  && apt list --installed | wc -l   Command use to check the number of dpkg and  apt package install me machine
+apt list | wc -l Number of packages in apt today is about 99682 packages.
+The display informations about a package we used the command apt show package_name
+# Example apt show firefox or apt show codium 
+to install a package using dpkg we use the command 
+# dpkg -i package_name.deb
+We can search a particulat file using the command "apt seatch package_name"
+# Note : All the installation needs the sudo prefix 
