@@ -535,3 +535,19 @@ to install a package using dpkg we use the command
 # dpkg -i package_name.deb
 We can search a particulat file using the command "apt seatch package_name"
 # Note : All the installation needs the sudo prefix 
+
+
+# Lesson 27 :Adding repositories
+In linux all software are not always avaiable via the package  management 
+To install programs like  gns3 Vscodium and even more other files we can add repositories to our machine 
+Which will provide us more set of package to do our installations.
+Do no forget package are install during using dpkg management
+To remove packages using the dpkg utility we used the sudo -r dpkg package_names
+# Adding repository will permit us to be always notified to any software update 
+Adding a new repo is mainly involves 2 steps which mainly includes desiding the repo to add and aading the repo keys
+Beacuse we should all repositories has specific keys which permit to connect to them for package transactions.
+repositories are been paste into the source.list directory.
+# Example all our repositories are in the /etc/apt/sources.list.d file 
+Following this path we can add all the repository i want on our linux machine.
+When adding repository we sometimes need to know our system Codename to know if we are adding the good repository or not 
+# for that we use the command lsb_release -a
