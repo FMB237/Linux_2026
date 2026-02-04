@@ -38,6 +38,9 @@ whatis systemctl
 whatis apt 
 whatis flatpak
 whatis mc
+whatis cron
+whatis crontab 
+
  #Let view all the file that are in our downlpad directory.
 
  ls ~/Downloads 

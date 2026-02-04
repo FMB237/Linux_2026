@@ -551,3 +551,36 @@ repositories are been paste into the source.list directory.
 Following this path we can add all the repository i want on our linux machine.
 When adding repository we sometimes need to know our system Codename to know if we are adding the good repository or not 
 # for that we use the command lsb_release -a
+
+# Lesson 28 : Cron service,Crontab and utility
+The cron service and crontab allows us to manage task schudule on our linux system
+cron and crontab are pre-install with linux we can use the command systel to view if the cron service is operational on our machine 
+# that is systemctl status cron 
+Let start the cron service on our computer and start managing utility tasks
+Using the crontab --help we can view the used of the crontab and our it functions 
+# Let run crontab -l to list our tasks in occurs in our computer 
+But since no task was define we gonna display no task 
+So let create some let create some crontab first launch using the command 
+# crontab -e
+Then we will ask to select for a text editor to write our cron tasks
+i will choose nano Then delect all inside the configuration file so that we will write our own new configurations
+Using the exemple and the task i create we can clearlt see that tasks in cron execute each minute .
+For better understanding the used of the crontab we can move to the crontab.guru website which will provide to us better informations about cron
+# like task period execution configurations @daily,@hourly,@weekly,@yearly and @reboot
+This example give us how the cron task mainly functions according to their usage time So the can be set up to occur each day,hour,minute or even year.
+
+
+# Lesson 29: Error handling 
+Using Crontab we can easily mess up by sending up an incorrect time for a task excusion like 
+# giving to a task a delay of more than 60 minutes or zero hours when creating the conditions 
+To see how the crontab interact with our system we can move to the crontab and view our configs
+When  writing a cron service tasl we should be very careful because if we fail we will not have any chech automatic check and our cron service made crash 
+Leaving our whole system with sercious problems
+
+# Now let set Logs in the Cron service
+Moving to the  /etc/rsyslog.d/50-default.conf  and modofied the cron logs path so that we can seperate the cron logs into another path file for easy problem solving in this system
+After that restart the rsyslog and cron service using the commands
+systemctl restart rsyslog && systemctl restart cron
+We can also pass through the sudo command to view and add cron tasks to other users
+
+# To remove a task we used the command crontab -r to add we used cron -e to list we use crontab -l 
