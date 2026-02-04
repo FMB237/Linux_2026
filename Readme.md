@@ -582,5 +582,60 @@ Moving to the  /etc/rsyslog.d/50-default.conf  and modofied the cron logs path s
 After that restart the rsyslog and cron service using the commands
 systemctl restart rsyslog && systemctl restart cron
 We can also pass through the sudo command to view and add cron tasks to other users
-
++
 # To remove a task we used the command crontab -r to add we used cron -e to list we use crontab -l 
+
+
+# Lesson 30 : View,add and delect rules 
+This is mainly the process of  working with firewalls on linux 
+Linux comes with a default tools for adminstrating IP address let it be IPV4 and IPV6 address and that tools is iptables
+iptables is an adminstratif utility but in some rare distros we can add this using the command 
+sudo apt install iptables 
+To list our network rules we can use the command 
+# sudo iptables -L
+Which will list all the actaul rules in our system
+This rules can be stored into a file  like my_iprules 
+This rules file will contain all your actaul network files configurations including Vms and container address and their permissions
+For management this interaction we need to configurate our firewall to tried in comming requests from other servers on machines
+So for both input and output requests we need to do chains rules
+We can write rules for pre-processing and out-processing requests.
+We can use the command sudo iptables --help to view all what we can do from using the iptables command
+# sudo iptables --help
+# Using the iptables we can add,chain,delect,Insert,replace rules and do many other stuff all that passing through the command 
+# sudo iptables -A,-C,-D,-I,-R respectively 
+e.g sudo iptables -A INPUT -j LOG  to task all the logs
+To clean all our chain we use the command sudo iptables -F where F= Flush
+we can add also log in input,Output and Forward chain using the set of commands
+
+Inputs: sudo iptables -A INPUT -j LOG
+Output: sudo iptables -A OUTPUT- j LOG
+Forward: sudo iptables -A FORWARD - LOG
+# To delect a rule we used the command sudo iptables -D INPUT OR OUTPUT "Rule_number"
+
+
+# Lesson 31 :Default policies and save rules
+We mainly see that with the used of the iptables we can design to who to communicate with who in our computer network 
+We can mainly view the iptables utility rules requires using the command
+sudo iptable -L --line-numbers To view all my rules i'm actually using docker So for me containersi have many rules sometimes uo to 7 
+In the previous lesson we added a Rules like 
+# sudo iptables -A INPUT -s "192.168.1.122" -j DROP (rejecting request from this address so the host will be unreachable)
+# sudo iptables -A INPUT -s "192.168.1.122" -j ACCEPT (accepting requests from this ip address)
+
+We can also insert some rules using the command  -I
+# sudo iptables -I INPUT -s "192.168.1.122" -j  or ACCEPT sudo iptables -I INPUT -s "192.168.1.122" -j DROP or sudo iptables -I INPUT -s "192.168.1.122" -j REJECT
+when Delecting  we use the -D and give me specific rule to delect 
+
+Let move on to default policies  
+We used the command ip sudo iptable -P INPUT to make all the input requests to be blocked so if we activate this command all more request in a machine will be blocked
+# Now let move on rules for ports  
+So let set up rules for the port we used on our my 
+As we know port 22 is used for ssh connections so let create a new rule for that 
+# iptables -I INPUT  -p --tcp --dport 22 -j ACCEPT 
+This is make all request to port 22 by allowed and also connect through ssh 
+Meaning we can also Drop the use of that port 
+# Note that all this setting will be forget or lose when we reboot our linux machine 
+
+But we can make this rule permenent  by saving this rules
+Using the commands :  
+# whatis iptables-save && whatis iptables-restore
+we can save and restore all our iptables configurations we made on our server 

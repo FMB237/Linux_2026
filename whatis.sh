@@ -40,7 +40,9 @@ whatis flatpak
 whatis mc
 whatis cron
 whatis crontab 
-
+whatis iptables
+whatis iptables-save
+whatis iptables-restore
  #Let view all the file that are in our downlpad directory.
 
  ls ~/Downloads 

@@ -21,4 +21,10 @@ sudo apt install zip
 sudo apt install pandoc
 
 #Let install some task manager tools 
-sudo apt install htop && sudo apt install btop 
+sudo apt install htop && sudo apt install btop && sudo apt install mc
+
+#Let install some funny dev tools
+sudo apt install cowsay 
+
+#Let install iptables management
+sudo apt install iptables
