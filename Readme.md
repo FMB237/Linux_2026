@@ -639,3 +639,83 @@ But we can make this rule permenent  by saving this rules
 Using the commands :  
 # whatis iptables-save && whatis iptables-restore
 we can save and restore all our iptables configurations we made on our server 
+to view all the iptables rules we can used the command
+
+cat iptables_rules
+
+# Lesson 32 : Bashing scripting
+whatis bash in the early days of linux bash shell which evolute today into a powerful scripting language
+I already have a full linux bah course on my personal repository but let do some bash 
+Bash mainly give us superpowers on linux because bash permit us to automate tasks on linux like installation to even packet download passing through automation using prebuilt tools like crontab chmod chown and mainly others
+All bash file carries the file extension .sh 
+So the bash  is been  defined as command interpreter
+Bash  is the more popular shell in linux .
+Now let create some script in bash
+Today we can used any command editor to write our bash scripts but in server environments we will mainly used the vim editor or nano 
+# After writing our script make it executable using the command chmod +x "command.sh"
+Let do a small script that will permit us to ping to the internet when launch 
+
+Note the first line in our script "#!bin/bash" is called the shaban line which mainly specified the part to our interpretet in our system 
+So if we have an other interpreter than bash we can also specified the path to it .
+
+# Like #!usr/bin/python3 to write python scripts 
+# To show where our interpreter is install we used the command   "where is bash or whereis python"
+Some example include the following 
+whereis bash
+bash: /usr/bin/bash /usr/share/man/man1/bash.1.gz
+Even when connecting to a docker container other used the bash shell for terminal connections*
+we can view all our shell installed on our machine using the command 
+
+cat /etc/shells in mac OS we also have a shell known as the zsh
+To make a python script executable use the command chmod u+x "script_name"
+
+# Lesson 33: Docker (Definition and installation)
+What is docker today in the modern world of developement docker is mainly the technology using for containization,building and deployment of ready to production images in linux docker is said to be the technology which make developers works unified so the stop the phase it work on my Mahcine 
+I already have some bash scripts to install and run docker containers on my machine.
+# Or can use the sudo apt install docker.io -y to install and run docker in Ubuntu 
+Then using the command docker --help to check what we can do with 
+Today docker has permit apps to run in the same server but in differcent containers which can communicate with each other and takes less resources
+And Note  Containers != Virtual machine 
+Containers are lighter than virtual machines 
+
+# Lesson 34 : Command List ,First container
+When docker is been install on our local linux machine to access prebuilt docker containers  we need to pass througth the cloud by the website known as docker.hub Docker hub is a repository where we can upload and download docker images that we can used for projects and ready production activties.
+
+# To pull and docker images we used the command 
+docker pull "containe_name" or can move to the website docker.hub and take that image directly 
+when we pull and image i take a space on our machine and container consumes Cpu and RAM on our machine so the consume our resources like Vm but far less
+This images can given port on which the run so the can be access using our web browser .
+
+To remove a conatiner we used the command docker rm "container_name"
+To remove a container image we used the command docker rmi 'container images'
+To view container we use docker ps -a
+To start we use docker run -it "container name"
+exec allows you to run a command inside a container and build permit tp create file images from a docker file 
+We generally start with hello-world container to start using docker like in any other programing language.
+
+ # docker run hello-world to pull the hello world container 
+ If we already have the docker image on our machine then docker will nor pull any image again and put that specific image.
+
+ # Lesson 35 : Containers with documentations
+ To use docker as none sudo we need to add the user in the docker group but it is only used for personal pc and not at enterprise level work for security reasons
+like tail  /etc/group to check if the is a group there
+To add a new user to the docker group we used the command 
+# sudo usermod -aG docker $USER  and restart the docker service sudo systemctl restart docker
+In the website we can even run the documentation container on our machine in other to learn docker doc in local let used the following command 
+
+# docker run -dp 80:80 docker/getting-started
+We gave the container port 80 so it run on http://localhost:80 with docker all our app will run in our browser
+and we can run many containers with this system browser.
+
+# Lesson 36: Nginx Web server
+let try to run the popular nginx webserver into a docker container
+First look for an nginx webserver using the docker search command 
+# docker search nginx 
+Which wil give us a list of images at the top of the list is the official docker nginx webserver and other images are customs
+
+pull the nginx container with docker pull nginx  and run the container with the following command
+docker run -d nginx where d = detach ,But Now let map a port to our container using the -p option
+# docker run -d -p 8080:80 nginx 
+The first address in the port inside the container and the 80 port is the port outside our container  and move to our web browser 
+Use the command exec to excute processes inside the container.
+I will run my container using portainer-ce whcih permits to run and manage   containers in browser
