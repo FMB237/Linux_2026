@@ -1,5 +1,8 @@
 # This is a Simple Udemy Course to learn how to install used Linux in 2026 from scarth
 
+Author :Fouenang Miguel Bruce
+Address: miguelfouenanf@gmail.com or bfouenang237@gmail.com
+
 Generally we need to install some tools depending the Os we are using if using Windows then we will need to install virtualization softwares
 # 1.Virtulisation
 What is Vitualization ?
@@ -719,3 +722,52 @@ docker run -d nginx where d = detach ,But Now let map a port to our container us
 The first address in the port inside the container and the 80 port is the port outside our container  and move to our web browser 
 Use the command exec to excute processes inside the container.
 I will run my container using portainer-ce whcih permits to run and manage   containers in browser
+
+# Lesson 37 : Dockfile
+The Dockerfile is just a plane text file but the first letter has be written in capital letter 
+Dockerfile is mainly used to automate the steps of creating docker image so this create custom containers from the same image
+Let create an nginx folder where we will build some nginx containers using the nginx image
+To write a Dockerfile we need to start with the form command to specified from which images we can building our file 
+We need to know the notion of layers which permit to build container on top of other one like on Ubuntu container which will contain an nginx container build inside it and that nginx container running other images so we can build images on images
+
+# So we can multistage Docker
+
+# Okay so let build that Dockerfile
+
+We wrote a Dockerfile inside the folder nginx project
+# Used the command docker build -t  Bruce_nginx_image . to build and nginx webserver
+Image create using dockerfile are mode lighter and compact then images created
+Then give it a port and run our container
+
+# lesson 38 : docker-compose
+Docker compose is not a default package that come with docker it is install on it own 
+we can used the command sudo apt install docker-compose to install it 
+The main rule of docker-compose is that it allosws us to define and run mutliple containers within the same docker application and permit us to run full lab during mainly images
+It mainly a more proffession way to works with container used to automate container usage deployement and management
+# Docker-compose file what we want we call .yml 
+let create a docker-compose file to run phpmyadmin and Mysql database  or mariadb in the same application
+After writing our docker-compose file we used the  the following commands to run and stops the services
+
+# docker-compose up -d
+# docker-compose down -v where v = volumes
+
+
+# Removing resources 
+After working for a long time with docker we can find out that we have mainly launch and used mainly images so we made like to used the command 
+# docker rm "container-id" 
+Always stop our running container
+But we can also remove forfully our containers using the command 
+# docker rm -f "container-id"
+
+If we only need the containers id we use the command 
+# docker ps -aq
+To delect all this contaienr we use the command 
+
+# docker rm $(docker ps -aq)
+To remove all images we used docker rmi $(docker ps -aq)
+
+This is the end of the course
+
+
+Author :Fouenang Miguel Bruce
+Address: miguelfouenanf@gmail.com or bfouenang237@gmail.com
